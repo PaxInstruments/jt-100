@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -1770,8 +1770,14 @@ Use the atrribute in the schematic editor to change the fields.</description>
 </classes>
 <parts>
 <part name="U$1" library="dp_devices.v6" deviceset="FRAME_DINA4_L" device=""/>
-<part name="IC1" library="dp_devices.v6" deviceset="IC_TC7106/7" device=""/>
-<part name="IC2" library="dp_devices.v6" deviceset="IC_AD8495" device=""/>
+<part name="IC1" library="dp_devices.v6" deviceset="IC_TC7106/7" device="">
+<attribute name="MPN" value="TC7106CKW"/>
+<attribute name="OC_DIGIKEY" value="TC7106CKW-ND"/>
+</part>
+<part name="IC2" library="dp_devices.v6" deviceset="IC_AD8495" device="">
+<attribute name="MPN" value="AD8495ARMZ"/>
+<attribute name="OC_DIGIKEY" value="AD8495ARMZ-ND"/>
+</part>
 <part name="VCC1" library="dp_devices.v6" deviceset="SUPPLY_VCC" device=""/>
 <part name="GND1" library="dp_devices.v6" deviceset="SUPPLY_GND" device=""/>
 <part name="GND2" library="dp_devices.v6" deviceset="SUPPLY_GND" device=""/>
@@ -1787,9 +1793,18 @@ Use the atrribute in the schematic editor to change the fields.</description>
 <part name="R4" library="dp_devices.v6" deviceset="RESISTOR" device="-1206"/>
 <part name="C3" library="dp_devices.v6" deviceset="CAPACITOR_NPOL" device="-1206"/>
 <part name="C4" library="dp_devices.v6" deviceset="CAPACITOR_NPOL" device="-1206"/>
-<part name="7SEG1" library="dp_devices.v6" deviceset="DISP_7SEG" device="-10MM" value="DISP_7SEG-10MM"/>
-<part name="7SEG2" library="dp_devices.v6" deviceset="DISP_7SEG" device="-10MM" value="DISP_7SEG-10MM"/>
-<part name="7SEG3" library="dp_devices.v6" deviceset="DISP_7SEG" device="-10MM" value="DISP_7SEG-10MM"/>
+<part name="7SEG1" library="dp_devices.v6" deviceset="DISP_7SEG" device="-10MM" value="DISP_7SEG-10MM">
+<attribute name="MPN" value="LTS-4817CKR-P"/>
+<attribute name="OC_DIGIKEY" value="160-1865-2-ND"/>
+</part>
+<part name="7SEG2" library="dp_devices.v6" deviceset="DISP_7SEG" device="-10MM" value="DISP_7SEG-10MM">
+<attribute name="MPN" value="LTS-4817CKR-P"/>
+<attribute name="OC_DIGIKEY" value="160-1865-2-ND"/>
+</part>
+<part name="7SEG3" library="dp_devices.v6" deviceset="DISP_7SEG" device="-10MM" value="DISP_7SEG-10MM">
+<attribute name="MPN" value="LTS-4817CKR-P"/>
+<attribute name="OC_DIGIKEY" value="160-1865-2-ND"/>
+</part>
 <part name="R5" library="dp_devices.v6" deviceset="RESISTOR" device="-1206" value="5.1R 1/4W"/>
 <part name="VCC4" library="dp_devices.v6" deviceset="SUPPLY_VCC" device=""/>
 <part name="T1" library="dp_devices.v6" deviceset="PAD_TERMINAL" device="-1.02MM_SQUARE"/>
@@ -1814,8 +1829,14 @@ Use the atrribute in the schematic editor to change the fields.</description>
 <instances>
 <instance part="U$1" gate="G$1" x="0" y="0"/>
 <instance part="U$1" gate="G$2" x="158.75" y="3.81"/>
-<instance part="IC1" gate="IC" x="91.44" y="76.2"/>
-<instance part="IC2" gate="IC" x="33.02" y="101.6"/>
+<instance part="IC1" gate="IC" x="91.44" y="76.2">
+<attribute name="OC_DIGIKEY" x="91.44" y="76.2" size="1.778" layer="96" display="off"/>
+<attribute name="MPN" x="91.44" y="76.2" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="IC2" gate="IC" x="33.02" y="101.6">
+<attribute name="OC_DIGIKEY" x="33.02" y="101.6" size="1.778" layer="96" display="off"/>
+<attribute name="MPN" x="33.02" y="101.6" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="VCC1" gate="SUP" x="25.4" y="116.84"/>
 <instance part="GND1" gate="G$1" x="25.4" y="83.82" smashed="yes"/>
 <instance part="GND2" gate="G$1" x="73.66" y="93.98" smashed="yes"/>
@@ -1855,9 +1876,18 @@ Use the atrribute in the schematic editor to change the fields.</description>
 <attribute name="NAME" x="71.12" y="78.74" size="1.778" layer="95"/>
 <attribute name="VALUE" x="68.58" y="81.28" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="7SEG1" gate="DISP" x="149.86" y="134.62"/>
-<instance part="7SEG2" gate="DISP" x="182.88" y="134.62"/>
-<instance part="7SEG3" gate="DISP" x="215.9" y="134.62"/>
+<instance part="7SEG1" gate="DISP" x="149.86" y="134.62">
+<attribute name="MPN" x="149.86" y="134.62" size="1.778" layer="96" display="off"/>
+<attribute name="OC_DIGIKEY" x="149.86" y="134.62" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="7SEG2" gate="DISP" x="182.88" y="134.62">
+<attribute name="MPN" x="182.88" y="134.62" size="1.778" layer="96" display="off"/>
+<attribute name="OC_DIGIKEY" x="182.88" y="134.62" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="7SEG3" gate="DISP" x="215.9" y="134.62">
+<attribute name="MPN" x="215.9" y="134.62" size="1.778" layer="96" display="off"/>
+<attribute name="OC_DIGIKEY" x="215.9" y="134.62" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="R5" gate="R" x="137.16" y="160.02" smashed="yes" rot="R90">
 <attribute name="NAME" x="139.7" y="160.02" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="139.7" y="157.48" size="1.778" layer="96" font="vector"/>
